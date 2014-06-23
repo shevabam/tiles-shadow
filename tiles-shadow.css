@@ -1,0 +1,187 @@
+/* --------------------- */
+/*  ==     Config        */
+/* --------------------- */
+.tiles-shadow {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.tiles-shadow li {
+  display: inline-block;
+  margin: 0 0 15px 15px;
+  -moz-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4), -2px -2px 3px 0 rgba(0, 0, 0, 0.7) inset;
+  -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4), -2px -2px 3px 0 rgba(0, 0, 0, 0.7) inset;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4), -2px -2px 3px 0 rgba(0, 0, 0, 0.7) inset;
+}
+.tiles-shadow li a {
+  display: block;
+  position: relative;
+  padding: 8px;
+  top: 0;
+  left: 0;
+  width: 170px;
+  height: 170px;
+  line-height: 170px;
+  background: #666;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.tiles-shadow li a:hover, .tiles-shadow li a:focus {
+  left: -10px;
+  top: -10px;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.tiles-shadow li a:hover:before, .tiles-shadow li a:focus:before {
+  height: 10px;
+}
+.tiles-shadow li a:hover:after, .tiles-shadow li a:focus:after {
+  width: 10px;
+}
+.tiles-shadow li a:hover:after, .tiles-shadow li a:focus:after, .tiles-shadow li a:hover:before, .tiles-shadow li a:focus:before {
+  background: #333;
+}
+.tiles-shadow li a:after, .tiles-shadow li a:before {
+  content: "";
+  position: absolute;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.tiles-shadow li a:before {
+  width: 100%;
+  height: 0;
+  left: 5px;
+  top: 100%;
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+  -moz-transform: skew(45deg, 0deg);
+  -ms-transform: skew(45deg, 0deg);
+  -webkit-transform: skew(45deg, 0deg);
+  transform: skew(45deg, 0deg);
+}
+.tiles-shadow li a:after {
+  width: 0;
+  height: 100%;
+  left: 100%;
+  top: 5px;
+  -moz-box-shadow: 5px 0 10px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 5px 0 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 5px 0 10px rgba(0, 0, 0, 0.4);
+  -moz-transform: skew(0deg, 45deg);
+  -ms-transform: skew(0deg, 45deg);
+  -webkit-transform: skew(0deg, 45deg);
+  transform: skew(0deg, 45deg);
+}
+.tiles-shadow li a span {
+  font-size: 28px;
+}
+
+/* --------------------- */
+/*  ==     Colors        */
+/* --------------------- */
+.tiles-shadow--purple {
+  background: #9b59b6 !important;
+}
+.tiles-shadow--purple:hover:after, .tiles-shadow--purple:focus:after, .tiles-shadow--purple:hover:before, .tiles-shadow--purple:focus:before {
+  background: #623475 !important;
+}
+
+.tiles-shadow--yellow {
+  background: #f1c40f !important;
+}
+.tiles-shadow--yellow:hover:after, .tiles-shadow--yellow:focus:after, .tiles-shadow--yellow:hover:before, .tiles-shadow--yellow:focus:before {
+  background: #927608 !important;
+}
+
+.tiles-shadow--pink {
+  background: #d66d92 !important;
+}
+.tiles-shadow--pink:hover:after, .tiles-shadow--pink:focus:after, .tiles-shadow--pink:hover:before, .tiles-shadow--pink:focus:before {
+  background: #ad305c !important;
+}
+
+.tiles-shadow--orange {
+  background: #f39c12 !important;
+}
+.tiles-shadow--orange:hover:after, .tiles-shadow--orange:focus:after, .tiles-shadow--orange:hover:before, .tiles-shadow--orange:focus:before {
+  background: #976008 !important;
+}
+
+.tiles-shadow--red {
+  background: #e74c3c !important;
+}
+.tiles-shadow--red:hover:after, .tiles-shadow--red:focus:after, .tiles-shadow--red:hover:before, .tiles-shadow--red:focus:before {
+  background: #a82315 !important;
+}
+
+.tiles-shadow--cyan {
+  background: #1abc9c !important;
+}
+.tiles-shadow--cyan:hover:after, .tiles-shadow--cyan:focus:after, .tiles-shadow--cyan:hover:before, .tiles-shadow--cyan:focus:before {
+  background: #0e6252 !important;
+}
+
+.tiles-shadow--blue {
+  background: #3498db !important;
+}
+.tiles-shadow--blue:hover:after, .tiles-shadow--blue:focus:after, .tiles-shadow--blue:hover:before, .tiles-shadow--blue:focus:before {
+  background: #196090 !important;
+}
+
+.tiles-shadow--green {
+  background: #2ecc71 !important;
+}
+.tiles-shadow--green:hover:after, .tiles-shadow--green:focus:after, .tiles-shadow--green:hover:before, .tiles-shadow--green:focus:before {
+  background: #1b7943 !important;
+}
+
+.tiles-shadow--darkblue {
+  background: #34495e !important;
+}
+.tiles-shadow--darkblue:hover:after, .tiles-shadow--darkblue:focus:after, .tiles-shadow--darkblue:hover:before, .tiles-shadow--darkblue:focus:before {
+  background: #10161c !important;
+}
+
+.tiles-shadow--lightblue {
+  background: #6a93d4 !important;
+}
+.tiles-shadow--lightblue:hover:after, .tiles-shadow--lightblue:focus:after, .tiles-shadow--lightblue:hover:before, .tiles-shadow--lightblue:focus:before {
+  background: #305ea8 !important;
+}
+
+.tiles-shadow--lightpink {
+  background: #f76f87 !important;
+}
+.tiles-shadow--lightpink:hover:after, .tiles-shadow--lightpink:focus:after, .tiles-shadow--lightpink:hover:before, .tiles-shadow--lightpink:focus:before {
+  background: #f20e36 !important;
+}
+
+.tiles-shadow--lightyellow {
+  background: #ffc973 !important;
+}
+.tiles-shadow--lightyellow:hover:after, .tiles-shadow--lightyellow:focus:after, .tiles-shadow--lightyellow:hover:before, .tiles-shadow--lightyellow:focus:before {
+  background: #ffa20d !important;
+}
+
+.tiles-shadow--lightgreen {
+  background: #b5f36d !important;
+}
+.tiles-shadow--lightgreen:hover:after, .tiles-shadow--lightgreen:focus:after, .tiles-shadow--lightgreen:hover:before, .tiles-shadow--lightgreen:focus:before {
+  background: #85e713 !important;
+}
+
+.tiles-shadow--darkpurple {
+  background: #8e44ad !important;
+}
+.tiles-shadow--darkpurple:hover:after, .tiles-shadow--darkpurple:focus:after, .tiles-shadow--darkpurple:hover:before, .tiles-shadow--darkpurple:focus:before {
+  background: #522764 !important;
+}

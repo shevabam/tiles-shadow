@@ -1,0 +1,123 @@
+@charset "UTF-8";
+@import "compass";
+
+/* --------------------- */
+/*  ==     Config        */
+/* --------------------- */
+$tiles-shadow-colors: (
+    purple: #9B59B6,
+    yellow: #F1C40F,
+    pink: #D66D92,
+    orange: #F39C12,
+    red: #E74C3C,
+    cyan: #1ABC9C,
+    blue: #3498DB,
+    green: #2ECC71,
+    darkblue: #34495E,
+    lightblue: #6A93D4,
+    lightpink: #F76F87,
+    lightyellow: #FFC973,
+    lightgreen: #B5F36D,
+    darkpurple: #8E44AD
+);
+
+$tiles-shadow-width: 170px;
+$tiles-shadow-height: 170px;
+
+
+.tiles-shadow {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+        display: inline-block;
+        margin: 0 0 15px 15px;
+        @include box-shadow(2px 2px 3px rgba(0, 0, 0, 0.4), -2px -2px 3px 0 rgba(0, 0, 0, 0.7) inset);
+
+        a {
+            display: block;
+            position: relative;
+            padding: 8px;
+            top: 0;
+            left: 0;
+            width: $tiles-shadow-width;
+            height: $tiles-shadow-height;
+            line-height: $tiles-shadow-height;
+            background: #666;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            @include transition(all 0.3s ease);
+
+            &:hover,
+            &:focus {
+                left: -10px;
+                top: -10px;
+                @include box-shadow(none);
+            }
+
+            &:hover:before,
+            &:focus:before {
+                height: 10px;
+            }
+            &:hover:after,
+            &:focus:after {
+                width: 10px;
+            }
+
+            &:hover:after, 
+            &:focus:after,
+            &:hover:before,
+            &:focus:before {
+                background: #333;
+            }
+
+            &:after,
+            &:before {
+                content: "";
+                position: absolute;
+                @include transition(all 0.3s ease);
+            }
+
+            &:before {
+                width: 100%;
+                height: 0;
+                left: 5px;
+                top: 100%;
+                @include box-shadow(0 5px 10px rgba(0, 0, 0, 0.4));
+                @include transform(skew(45deg, 0deg));
+            }
+
+            &:after {
+                width: 0;
+                height: 100%;
+                left: 100%;
+                top: 5px;
+                @include box-shadow(5px 0 10px rgba(0, 0, 0, 0.4));
+                @include transform(skew(0deg, 45deg));
+            }
+
+            span {
+                font-size: 28px;
+            }
+        }
+    }
+}
+
+
+/* --------------------- */
+/*  ==     Colors        */
+/* --------------------- */
+@each $name, $color in $tiles-shadow-colors {
+    .tiles-shadow--#{$name} {
+        background: $color !important;
+
+        &:hover:after, 
+        &:focus:after, 
+        &:hover:before, 
+        &:focus:before {
+            background: darken($color, 20%) !important;
+        }
+    }
+}
